@@ -13,7 +13,8 @@ body {
  nav, article, footer, #imageBox {
      background: lightblue;
 }
-
+/*----------------------------Below is the catch all CSS -----------------------------------------------*/
+/*Define the basic*/
  .grid {
      display: grid;
 
@@ -76,11 +77,11 @@ nav li a:hover{
 }
 
 
-    @media all and (min-width: 576px) { 
+    @media all and (min-width: 576px) { /*CSS kicks in when the device width is 576px and above*/
 
      .grid {
         
-        grid-template-columns: 1fr 2fr; 
+        grid-template-columns: 1fr 2fr; /*This does not feel right is the column width OK?*/
          grid-template-areas: 
          "H1 H1"
          "nav nav" 
@@ -95,8 +96,8 @@ nav li a:hover{
 
 }
 
-
-    @media all and (min-width: 768px) and (max-width: 1023px){ 
+/* Medium devices (landscape tablets, 768px and up) */
+    @media all and (min-width: 768px) and (max-width: 1023px){ /*CSS kicks in when the device width is 768px and above*/
         .grid {
             grid-template-columns: 1fr 2fr;
             grid-template-areas:
@@ -107,7 +108,9 @@ nav li a:hover{
             "footer footer ";
 
         }
-
+        /*This break point needs a .grid -- hint: copy from another breakpoint 
+            and change as needed
+        */
 
 
  #sidebar {
@@ -116,7 +119,8 @@ nav li a:hover{
 
 }
 
-    @media all and (min-width: 1024px) { 
+    @media all and (min-width: 1024px) { /*CSS kicks in when the device width is 1024px and above*/
+    /* Large devices (laptops/desktops, 1024px and up) */
      .grid {
          grid-template-columns: 3fr 1fr 1fr;
         /*fr = fraction*/
